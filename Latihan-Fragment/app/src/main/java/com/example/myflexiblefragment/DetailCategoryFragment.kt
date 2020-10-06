@@ -1,15 +1,16 @@
-package com.example.myflexiblefragment
-
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-
+import androidx.fragment.app.Fragment
+import com.example.myflexiblefragment.OptionDialogFragment
+import com.example.myflexiblefragment.ProfileActivity
+import com.example.myflexiblefragment.R
+import kotlinx.android.synthetic.main.fragment_detail_category.*
 
 class DetailCategoryFragment : Fragment(), View.OnClickListener {
 
@@ -50,8 +51,8 @@ class DetailCategoryFragment : Fragment(), View.OnClickListener {
 
         if (arguments != null) {
             val categoryName = arguments?.getString(EXTRA_NAME)
-            tvCategoryName.text = categoryName
-            tvCategoryDescription.text = description
+            tv_category_name.text = categoryName
+            tv_category_description.text = description
         }
     }
 

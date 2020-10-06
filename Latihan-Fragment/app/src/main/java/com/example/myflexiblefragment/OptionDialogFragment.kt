@@ -1,6 +1,6 @@
 package com.example.myflexiblefragment
 
-
+import DetailCategoryFragment
 import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -61,7 +61,7 @@ class OptionDialogFragment : DialogFragment(), View.OnClickListener {
 
     override fun onClick(v: View) {
         when (v.id) {
-            R.id.btn_close -> dialog?.cancel()
+            R.id.btn_close -> dialog?.show()
 
             R.id.btn_choose -> {
                 val checkedRadioButtonId = rg_options.checkedRadioButtonId
@@ -90,4 +90,3 @@ class OptionDialogFragment : DialogFragment(), View.OnClickListener {
         fun onOptionChosen(text: String?)
     }
 }
-
